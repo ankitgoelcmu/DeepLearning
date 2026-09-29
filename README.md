@@ -1,30 +1,37 @@
 # DeepLearning
 
-A collection of Colab notebooks documenting my deep learning study path — from RNN/transformer fundamentals through building and fine-tuning models from scratch.
+Notebooks from working through deep learning fundamentals — RNNs, transformers, and building/fine-tuning models by hand instead of just calling an API.
 
 ## Notebooks
 
+### Highlights
+
 | Notebook | Description |
 |---|---|
-| [DeepLearning_Concepts.ipynb](DeepLearning_Concepts.ipynb) | Notes on RNN fundamentals — sequential processing, hidden state, and the vanishing gradient problem. |
-| [Transformer_Learnings_and_Key_Concepts.ipynb](Transformer_Learnings_and_Key_Concepts.ipynb) | Study notes on "Attention Is All You Need" — RNN/LSTM limitations, positional encoding, self-attention, and multi-head attention. |
-| [Understanding_GPT__Word_Positional_embedding.ipynb](Understanding_GPT__Word_Positional_embedding.ipynb) | Deep dive into word and positional embeddings — how discrete tokens become continuous vectors for transformer input. |
-| [NanoGPT_02.ipynb](NanoGPT_02.ipynb) | Implementation walkthrough of a GPT-2 style architecture (NanoGPT). |
-| [RNN_Model01.ipynb](RNN_Model01.ipynb) | Hands-on RNN model implementation. |
-| [03_pytorch_computer_vision_exercises.ipynb](03_pytorch_computer_vision_exercises.ipynb) | PyTorch computer vision exercises, based on notebook 03 of the *Learn PyTorch for Deep Learning* course. |
-| [Transformer_for_Image_Recognition_VIT_Paper_Implementation_Exercise.ipynb](Transformer_for_Image_Recognition_VIT_Paper_Implementation_Exercise.ipynb) | Replication of the Vision Transformer (ViT) paper — "An Image Is Worth 16x16 Words." |
-| [Fine_Tuning_Base_Model_PEFT_(QLORA).ipynb](Fine_Tuning_Base_Model_PEFT_(QLORA).ipynb) | Fine-tunes DistilBERT with QLoRA for network intrusion (threat) detection on the NSL-KDD dataset, converting tabular features into log-like text strings. |
+| [NanoGPT_02.ipynb](NanoGPT_02.ipynb) | Building a GPT-2 style model from scratch. |
+| [Transformer_for_Image_Recognition_VIT_Paper_Implementation_Exercise.ipynb](Transformer_for_Image_Recognition_VIT_Paper_Implementation_Exercise.ipynb) | Replicating the Vision Transformer paper ("An Image Is Worth 16x16 Words"). |
+| [Fine_Tuning_Base_Model_PEFT_(QLORA).ipynb](Fine_Tuning_Base_Model_PEFT_(QLORA).ipynb) | Fine-tuning BERT-base with QLoRA to do threat detection on the NSL-KDD network intrusion dataset — turning tabular log features into text so a language model can classify them. |
+
+### Foundations
+
+| Notebook | Description |
+|---|---|
+| [DeepLearning_Concepts.ipynb](DeepLearning_Concepts.ipynb) | RNN basics — how hidden state works, and why vanishing gradients kill long-range memory. |
+| [Transformer_Learnings_and_Key_Concepts.ipynb](Transformer_Learnings_and_Key_Concepts.ipynb) | Notes from working through "Attention Is All You Need" — self-attention, multi-head attention, positional encoding. |
+| [Understanding_GPT__Word_Positional_embedding.ipynb](Understanding_GPT__Word_Positional_embedding.ipynb) | How tokens turn into embeddings, and why position has to be encoded separately. |
+| [RNN_Model01.ipynb](RNN_Model01.ipynb) | An RNN built from scratch. |
+| [03_pytorch_computer_vision_exercises.ipynb](03_pytorch_computer_vision_exercises.ipynb) | Computer vision exercises from the *Learn PyTorch for Deep Learning* course. |
 
 ## Usage
 
-Each notebook has an "Open in Colab" badge and is self-contained — open it directly in Google Colab to run.
+Every notebook has an "Open in Colab" badge — click it and run.
 
 ## Where this goes next
 
-- **QLoRA notebook**: write up what the fine-tuned model gets right and wrong, and update intro notes that still mention DistilBERT (switched to BERT-base partway through).
-- Add a KV cache to NanoGPT's text generation and measure the speedup.
-- Fine-tune a small generative model (not just an encoder) with LoRA and compare it to prompting.
+- **QLoRA notebook**: write up what the fine-tuned model actually gets right and wrong, and fix the intro text — it still says DistilBERT, but I switched to BERT-base partway through.
+- Add a KV cache to NanoGPT's text generation and see how much faster it gets.
+- Fine-tune a small generative model (not just an encoder) with LoRA and compare it against just prompting.
 
 ## Related
 
-I use this foundation for building production AI agents. Those projects are in [agentic-ai](https://github.com/ankitgoelcmu/agentic-ai).
+This is the foundation I build production AI agents on top of — that work lives in [agentic-ai](https://github.com/ankitgoelcmu/agentic-ai).
